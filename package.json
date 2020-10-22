@@ -1,0 +1,62 @@
+{
+  "name": "cscc2020-fall-backend-task",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "jest --config package.json",
+    "lint": "eslint src --ext .ts"
+  },
+  "devDependencies": {
+    "@types/config-yaml": "1.1.1",
+    "@types/cors": "2.8.8",
+    "@types/dotenv": "8.2.0",
+    "@types/express": "4.17.8",
+    "@types/jest": "24.9.0",
+    "@types/jsonwebtoken": "8.5.0",
+    "@types/morgan": "1.9.1",
+    "@types/node": "13.1.8",
+    "eslint": "6.8.0",
+    "jest": "24.9.0",
+    "prettier": "1.19.1",
+    "ts-jest": "24.3.0",
+    "ts-node": "8.6.2",
+    "typescript": "3.7.5"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/**/*.factory.ts",
+      "!src/commands/*"
+    ],
+    "coverageReporters": [
+      "html",
+      "json"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "dependencies": {
+    "axios": "0.20.0",
+    "config-yaml": "1.1.6",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "8.5.1",
+    "morgan": "1.10.0",
+    "path": "0.12.7"
+  }
+}
